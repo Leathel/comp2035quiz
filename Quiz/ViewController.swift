@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         print("View Did Load")
+        print("It sure Did")
     }
 
 
