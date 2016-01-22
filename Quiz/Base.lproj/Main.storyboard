@@ -26,10 +26,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp0-HJ-OCB">
                                 <rect key="frame" x="252" y="63" width="102" height="30"/>
                                 <state key="normal" title="Next Question"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HU3-TH-Y32">
-                                <rect key="frame" x="252" y="326" width="96" height="30"/>
-                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="nextQuestionClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3dD-6g-P87"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAz-DK-wad">
                                 <rect key="frame" x="254" y="28" width="93" height="27"/>
@@ -37,6 +36,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HU3-TH-Y32">
+                                <rect key="frame" x="252" y="326" width="96" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="te6-kh-1jt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -50,6 +56,11 @@
                             <constraint firstItem="zp0-HJ-OCB" firstAttribute="centerX" secondItem="WAz-DK-wad" secondAttribute="centerX" id="yAM-Nr-YeR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="lRm-os-Hyl" id="T4O-w4-qMc"/>
+                        <outlet property="nextQuestionButton" destination="zp0-HJ-OCB" id="dWT-fo-U0r"/>
+                        <outlet property="questionLabel" destination="WAz-DK-wad" id="5FL-Va-GLi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
